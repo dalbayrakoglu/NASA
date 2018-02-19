@@ -50,6 +50,17 @@ namespace Pluto.UnitTests
             Assert.AreEqual(rover.GetY(), 4);
         }
 
+        [TestMethod]
+        public void ExecuteOrder_MultipleBackForwardFacingEast_6_5()
+        {
+            Rover rover = new Rover(5, 5, 'E');
+
+            rover.ExecuteOrder("BBFFF");
+
+            Assert.AreEqual(rover.GetX(), 6);
+            Assert.AreEqual(rover.GetY(), 5);
+        }
+
         //[TestMethod]
         //public void ExecuteOrder_TurnRight_East()
         //{
