@@ -21,31 +21,37 @@
 
                 if (command == 'F')
                 {
-                    speed = 1;
+                    Move(1);
                 }
                 else if (command == 'B')
                 {
-                    speed = -1;
+                    Move(-1);
                 }
 
-                switch (_direction)
-                {
-                    case 'N':
-                        _y = _y + speed;
-                        break;
-                    case 'S':
-                        _y = _y - speed;
-                        break;
 
-                    case 'E':
-                        _x = _x + speed;
-                        break;
-
-                    case 'W':
-                        _x = _x - speed;
-                        break;
-                }
             }
+        }
+
+        private void Move(int speed)
+        {
+            switch (_direction)
+            {
+                case 'N':
+                    _y = _y + speed;
+                    break;
+                case 'S':
+                    _y = _y - speed;
+                    break;
+
+                case 'E':
+                    _x = _x + speed;
+                    break;
+
+                case 'W':
+                    _x = _x - speed;
+                    break;
+            }
+
         }
 
         public int GetX()
