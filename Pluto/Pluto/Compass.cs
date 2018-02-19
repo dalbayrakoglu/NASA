@@ -16,9 +16,10 @@ namespace Pluto
         {
             return _cardinalDirections[_directionIndex];
         }
-        //public void Turn(char steer)
-        //{
-        //    throw new NotImplementedException();
-        //}
+
+        public void Turn(char steer)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
