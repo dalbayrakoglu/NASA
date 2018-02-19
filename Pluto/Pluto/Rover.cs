@@ -28,16 +28,23 @@
                     speed = -1;
                 }
 
-                if (_direction == 'N')
+                switch (_direction)
                 {
-                    _y = _y + speed;
-                }
+                    case 'N':
+                        _y = _y + speed;
+                        break;
+                    case 'S':
+                        _y = _y - speed;
+                        break;
 
-                if (_direction == 'S')
-                {
-                    _y = _y - speed;
-                }
+                    case 'E':
+                        _x = _x + speed;
+                        break;
 
+                    case 'W':
+                        _x = _x - speed;
+                        break;
+                }
             }
         }
 
