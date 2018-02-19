@@ -43,5 +43,10 @@ namespace Pluto
         {
             return _y;
         }
+
+        public char GetDirection()
+        {
+            return _direction;
+        }
     }
 }
