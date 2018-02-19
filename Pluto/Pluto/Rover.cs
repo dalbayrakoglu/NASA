@@ -1,16 +1,18 @@
-﻿namespace Pluto
+﻿using Pluto.Interfaces;
+
+namespace Pluto
 {
     public class Rover
     {
         private int _x;
         private int _y;
-        private char _direction;
+        private ICompass _compass;
 
-        public Rover(int x, int y, char direction)
+        public Rover(int x, int y, ICompass compass)
         {
             _x = x;
             _y = y;
-            _direction = direction;
+            _compass = compass;
         }
 
         public void ExecuteOrder(string message)
@@ -27,33 +29,14 @@
                 }
                 else if (command == 'R')
                 {
-                    TurnRight();
+                    _compass.Turn(command);
                 }
-            }
-        }
-
-        private void TurnRight()
-        {
-            switch (_direction)
-            {
-                case 'N':
-                    _direction = 'E';
-                    break;
-                case 'E':
-                    _direction = 'S';
-                    break;
-                case 'S':
-                    _direction = 'W';
-                    break;
-                case 'W':
-                    _direction = 'N';
-                    break;
             }
         }
 
         private void Move(int speed)
         {
-            switch (_direction)
+            switch (_compass.GetDirection())
             {
                 case 'N':
                     _y = _y + speed;
@@ -85,7 +68,7 @@
 
         public char GetDirection()
         {
-            return _direction;
+            return _compass.GetDirection();
         }
     }
 }

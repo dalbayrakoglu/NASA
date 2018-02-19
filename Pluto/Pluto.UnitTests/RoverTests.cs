@@ -9,7 +9,7 @@ namespace Pluto.UnitTests
         [TestMethod]
         public void ExecuteOrder_Forward_0_1()
         {
-            Rover rover = new Rover(0, 0, 'N');
+            Rover rover = new Rover(0, 0, new Compass('N'));
 
             rover.ExecuteOrder("F");
 
@@ -20,7 +20,7 @@ namespace Pluto.UnitTests
         [TestMethod]
         public void ExecuteOrder_Backward_5_4()
         {
-            Rover rover = new Rover(5, 5, 'N');
+            Rover rover = new Rover(5, 5, new Compass('N'));
 
             rover.ExecuteOrder("B");
 
@@ -31,7 +31,7 @@ namespace Pluto.UnitTests
         [TestMethod]
         public void ExecuteOrder_MultipleBackForward_5_6()
         {
-            Rover rover = new Rover(5, 5, 'N');
+            Rover rover = new Rover(5, 5, new Compass('N'));
 
             rover.ExecuteOrder("BBFFF");
 
@@ -42,7 +42,7 @@ namespace Pluto.UnitTests
         [TestMethod]
         public void ExecuteOrder_MultipleBackForwardFacingSouth_5_4()
         {
-            Rover rover = new Rover(5, 5, 'S');
+            Rover rover = new Rover(5, 5, new Compass('S'));
 
             rover.ExecuteOrder("BBFFF");
 
@@ -53,7 +53,7 @@ namespace Pluto.UnitTests
         [TestMethod]
         public void ExecuteOrder_MultipleBackForwardFacingEast_6_5()
         {
-            Rover rover = new Rover(5, 5, 'E');
+            Rover rover = new Rover(5, 5, new Compass('E'));
 
             rover.ExecuteOrder("BBFFF");
 
@@ -63,7 +63,7 @@ namespace Pluto.UnitTests
         [TestMethod]
         public void ExecuteOrder_MultipleBackForwardFacingWest_4_5()
         {
-            Rover rover = new Rover(5, 5, 'W');
+            Rover rover = new Rover(5, 5, new Compass('W'));
 
             rover.ExecuteOrder("BBFFF");
 
@@ -74,7 +74,7 @@ namespace Pluto.UnitTests
         [TestMethod]
         public void ExecuteOrder_TurnRight_East()
         {
-            Rover rover = new Rover(5, 5, 'N');
+            Rover rover = new Rover(5, 5, new Compass('N'));
 
             rover.ExecuteOrder("R");
 
@@ -84,7 +84,7 @@ namespace Pluto.UnitTests
         [TestMethod]
         public void ExecuteOrder_TurnRight2_South()
         {
-            Rover rover = new Rover(5, 5, 'N');
+            Rover rover = new Rover(5, 5, new Compass('N'));
 
             rover.ExecuteOrder("RR");
 
@@ -92,13 +92,13 @@ namespace Pluto.UnitTests
         }
 
         [TestMethod]
-        public void ExecuteOrder_TurnRight3_West()
+        public void ExecuteOrder_TurnRight3_North()
         {
-            Rover rover = new Rover(5, 5, 'N');
+            Rover rover = new Rover(5, 5, new Compass('E'));
 
             rover.ExecuteOrder("RRR");
 
-            Assert.AreEqual(rover.GetDirection(), 'W');
+            Assert.AreEqual(rover.GetDirection(), 'N');
         }
     }
 }
