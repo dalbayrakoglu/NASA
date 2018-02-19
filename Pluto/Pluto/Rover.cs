@@ -8,5 +8,25 @@ namespace Pluto
 {
     public class Rover
     {
+        private int _x;
+        private int _y;
+
+        public Rover(int x, int y, char direction)
+        {
+
+        }
+        public void ExecuteOrder(string message)
+        {
+
+        }
+        public int GetX()
+        {
+            return _x;
+        }
+
+        public int GetY()
+        {
+            return _y;
+        }
     }
 }

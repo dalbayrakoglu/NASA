@@ -2,6 +2,6 @@
 {
     public interface IRover
     {
-        void ExecuteOrder();
+        void ExecuteOrder(string message);
     }
 }
