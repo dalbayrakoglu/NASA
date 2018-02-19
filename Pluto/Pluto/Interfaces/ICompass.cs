@@ -8,6 +8,6 @@ namespace Pluto.Interfaces
 {
     public interface ICompass
     {
-        void Turn(char steer);
+        //void Turn(char steer);
     }
 }

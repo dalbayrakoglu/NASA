@@ -5,9 +5,20 @@ namespace Pluto
 {
     public class Compass : ICompass
     {
-        public void Turn(char steer)
+        private int _directionIndex { get; set; }
+        private char[] _cardinalDirections = { 'N', 'E', 'S', 'W' };
+
+        public Compass(char direction)
         {
-            throw new NotImplementedException();
+            _directionIndex = Array.IndexOf(_cardinalDirections, direction);
         }
+        public char GetDirection()
+        {
+            return _cardinalDirections[_directionIndex];
+        }
+        //public void Turn(char steer)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
