@@ -18,7 +18,7 @@ namespace Pluto.UnitTests
         }
 
         [TestMethod]
-        public void ExecuteOrder_Backward_0_1()
+        public void ExecuteOrder_Backward_5_4()
         {
             Rover rover = new Rover(5, 5, 'N');
 
@@ -26,6 +26,18 @@ namespace Pluto.UnitTests
 
             Assert.AreEqual(rover.GetX(), 5);
             Assert.AreEqual(rover.GetY(), 4);
+        }
+
+
+        [TestMethod]
+        public void ExecuteOrder_MultipleBackForward_5_6()
+        {
+            Rover rover = new Rover(5, 5, 'N');
+
+            rover.ExecuteOrder("BBFFF");
+
+            Assert.AreEqual(rover.GetX(), 5);
+            Assert.AreEqual(rover.GetY(), 6);
         }
     }
 }

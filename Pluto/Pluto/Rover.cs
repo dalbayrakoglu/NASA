@@ -21,11 +21,15 @@ namespace Pluto
 
         public void ExecuteOrder(string message)
         {
-            foreach(char command in message)
+            foreach (char command in message)
             {
-                if(command == 'F')
+                if (command == 'F')
                 {
                     _y++;
+                }
+                else if (command == 'B')
+                {
+                    _y--;
                 }
             }
         }
