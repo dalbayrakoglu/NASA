@@ -1,5 +1,6 @@
 ﻿using System;
 using Pluto.Interfaces;
+using Pluto.Helpers;
 
 namespace Pluto
 {
@@ -21,11 +22,11 @@ namespace Pluto
         {
             if (steer == 'R')
             {
-                _directionIndex++;
+                _directionIndex = MathHelper.Modulo(_directionIndex + 1, _cardinalDirections.Length);
             }
             else if (steer == 'L')
             {
-                _directionIndex--;
+                _directionIndex = MathHelper.Modulo(_directionIndex - 1, _cardinalDirections.Length);
             }
         }
     }
