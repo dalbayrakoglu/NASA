@@ -48,6 +48,5 @@ namespace Pluto.UnitTests
 
             Assert.AreEqual(rover.GetDirection(), 6);
         }
-
     }
 }

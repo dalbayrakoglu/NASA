@@ -6,6 +6,5 @@
         char GetDirection();
         int GetX();
         int GetY();
-
     }
 }
