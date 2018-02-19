@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Compass.cs" />
+    <Compile Include="Helpers\MathHelper.cs" />
     <Compile Include="Interfaces\ICompass.cs" />
     <Compile Include="Interfaces\INavigationUnit.cs" />
     <Compile Include="Interfaces\IRover.cs" />

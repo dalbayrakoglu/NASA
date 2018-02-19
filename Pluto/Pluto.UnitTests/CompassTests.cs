@@ -25,7 +25,7 @@ namespace Pluto.UnitTests
 
 
         [TestMethod]
-        public void TurnLeft_InitWithEast_N()
+        public void Turn_Left_N()
         {
             Compass compass = new Compass('E');
 
@@ -35,10 +35,33 @@ namespace Pluto.UnitTests
         }
 
         [TestMethod]
-        public void TurnLeft_InitWithNorth_W()
+        public void Turn_Left_W()
         {
             Compass compass = new Compass('N');
 
+            compass.Turn('L');
+
+            Assert.AreEqual(compass.GetDirection(), 'W');
+        }
+
+        [TestMethod]
+        public void Turn_Right_N()
+        {
+            Compass compass = new Compass('W');
+
+            compass.Turn('R');
+
+            Assert.AreEqual(compass.GetDirection(), 'N');
+        }
+        [TestMethod]
+        public void Turn_Left5_W()
+        {
+            Compass compass = new Compass('N');
+
+            compass.Turn('L');
+            compass.Turn('L');
+            compass.Turn('L');
+            compass.Turn('L');
             compass.Turn('L');
 
             Assert.AreEqual(compass.GetDirection(), 'W');
