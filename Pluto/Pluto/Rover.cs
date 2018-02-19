@@ -15,27 +15,31 @@ namespace Pluto
             _compass = compass;
         }
 
+        //66
         public void ExecuteOrder(string message)
         {
             foreach (char command in message)
             {
-                if (command == 'F')
+                if (command == 'F' || command == 'B')
                 {
-                    Move(1);
-                }
-                else if (command == 'B')
-                {
-                    Move(-1);
+                    Move(command);
                 }
                 else if (command == 'R' || command == 'L')
                 {
                     _compass.Turn(command);
                 }
+                else
+                {
+                    //Exit if any command is invalid, do not want to get lost
+                    break;
+                }
             }
         }
 
-        private void Move(int speed)
+        private void Move(char command)
         {
+            int speed = command == 'F' ? 1 : -1;
+
             switch (_compass.GetDirection())
             {
                 case 'N':
