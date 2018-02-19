@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluto", "Pluto\Pluto.csproj", "{13537DCD-716C-4D63-9E4C-E77CE12EC71B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluto.UnitTests", "Pluto.UnitTests\Pluto.UnitTests.csproj", "{CF543B08-36A3-410C-8410-4DEB04561473}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{13537DCD-716C-4D63-9E4C-E77CE12EC71B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13537DCD-716C-4D63-9E4C-E77CE12EC71B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13537DCD-716C-4D63-9E4C-E77CE12EC71B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF543B08-36A3-410C-8410-4DEB04561473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF543B08-36A3-410C-8410-4DEB04561473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF543B08-36A3-410C-8410-4DEB04561473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF543B08-36A3-410C-8410-4DEB04561473}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
