@@ -19,7 +19,10 @@ namespace Pluto
 
         public void Turn(char steer)
         {
-            throw new NotImplementedException();
+            if (steer == 'R')
+            {
+                _directionIndex++;
+            }
         }
     }
 }
