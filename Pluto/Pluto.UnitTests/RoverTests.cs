@@ -13,8 +13,8 @@ namespace Pluto.UnitTests
 
             rover.ExecuteOrder("F");
 
-            Assert.Equals(rover.GetX(), 0);
-            Assert.Equals(rover.GetY(), 1);
+            Assert.AreEqual(rover.GetX(), 0);
+            Assert.AreEqual(rover.GetY(), 1);
         }
     }
 }

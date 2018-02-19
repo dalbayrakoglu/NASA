@@ -17,11 +17,17 @@ namespace Pluto
             _x = x;
             _y = y;
             _direction = direction;
-
         }
+
         public void ExecuteOrder(string message)
         {
-
+            foreach(char command in message)
+            {
+                if(command == 'F')
+                {
+                    _y++;
+                }
+            }
         }
 
         public int GetX()
