@@ -27,7 +27,7 @@ namespace Pluto
                 {
                     Move(-1);
                 }
-                else if (command == 'R')
+                else if (command == 'R' || command == 'L')
                 {
                     _compass.Turn(command);
                 }
