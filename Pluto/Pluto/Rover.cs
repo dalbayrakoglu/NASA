@@ -17,8 +17,6 @@
         {
             foreach (char command in message)
             {
-                int speed = 0;
-
                 if (command == 'F')
                 {
                     Move(1);
@@ -27,8 +25,6 @@
                 {
                     Move(-1);
                 }
-
-
             }
         }
 
