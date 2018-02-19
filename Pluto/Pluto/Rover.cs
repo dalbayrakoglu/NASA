@@ -28,7 +28,16 @@
                     speed = -1;
                 }
 
-                _y = _y + speed;
+                if (_direction == 'N')
+                {
+                    _y = _y + speed;
+                }
+
+                if (_direction == 'S')
+                {
+                    _y = _y - speed;
+                }
+
             }
         }
 
