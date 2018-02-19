@@ -10,15 +10,20 @@ namespace Pluto
     {
         private int _x;
         private int _y;
+        private char _direction;
 
         public Rover(int x, int y, char direction)
         {
+            _x = x;
+            _y = y;
+            _direction = direction;
 
         }
         public void ExecuteOrder(string message)
         {
 
         }
+
         public int GetX()
         {
             return _x;
