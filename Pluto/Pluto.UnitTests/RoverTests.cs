@@ -46,7 +46,7 @@ namespace Pluto.UnitTests
 
             rover.ExecuteOrder("R");
 
-            Assert.AreEqual(rover.GetDirection(), 6);
+            Assert.AreEqual(rover.GetDirection(), 'E');
         }
     }
 }
