@@ -80,5 +80,24 @@ namespace Pluto.UnitTests
 
             Assert.AreEqual(rover.GetDirection(), 'E');
         }
+
+        [TestMethod]
+        public void ExecuteOrder_TurnRight2_South()
+        {
+            Rover rover = new Rover(5, 5, 'N');
+
+            rover.ExecuteOrder("RR");
+
+            Assert.AreEqual(rover.GetDirection(), 'S');
+        }
+        [TestMethod]
+        public void ExecuteOrder_TurnRight3_West()
+        {
+            Rover rover = new Rover(5, 5, 'N');
+
+            rover.ExecuteOrder("RRR");
+
+            Assert.AreEqual(rover.GetDirection(), 'W');
+        }
     }
 }

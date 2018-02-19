@@ -25,6 +25,29 @@
                 {
                     Move(-1);
                 }
+                else if (command == 'R')
+                {
+                    TurnRight();
+                }
+            }
+        }
+
+        private void TurnRight()
+        {
+            switch (_direction)
+            {
+                case 'N':
+                    _direction = 'E';
+                    break;
+                case 'E':
+                    _direction = 'S';
+                    break;
+                case 'S':
+                    _direction = 'W';
+                    break;
+                case 'W':
+                    _direction = 'N';
+                    break;
             }
         }
 
