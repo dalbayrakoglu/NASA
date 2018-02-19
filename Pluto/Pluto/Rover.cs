@@ -1,4 +1,5 @@
-﻿using Pluto.Interfaces;
+﻿using Pluto.Helpers;
+using Pluto.Interfaces;
 
 namespace Pluto
 {
@@ -7,6 +8,8 @@ namespace Pluto
         private int _x;
         private int _y;
         private ICompass _compass;
+        private const int _mapXSize = 100;
+        private const int _mapYSize = 100;
 
         public Rover(int x, int y, ICompass compass)
         {
@@ -43,19 +46,19 @@ namespace Pluto
             switch (_compass.GetDirection())
             {
                 case 'N':
-                    _y = _y + speed;
+                    _y = MathHelper.Modulo(_y + speed, _mapYSize);
                     break;
 
                 case 'S':
-                    _y = _y - speed;
+                    _y = MathHelper.Modulo(_y - speed, _mapYSize);
                     break;
 
                 case 'E':
-                    _x = _x + speed;
+                    _x = MathHelper.Modulo(_x + speed, _mapXSize);
                     break;
 
                 case 'W':
-                    _x = _x - speed;
+                    _x = MathHelper.Modulo(_x - speed, _mapXSize);
                     break;
             }
 
