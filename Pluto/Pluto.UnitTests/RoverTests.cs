@@ -90,6 +90,7 @@ namespace Pluto.UnitTests
 
             Assert.AreEqual(rover.GetDirection(), 'S');
         }
+
         [TestMethod]
         public void ExecuteOrder_TurnRight3_West()
         {
