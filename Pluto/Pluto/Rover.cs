@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pluto
+﻿namespace Pluto
 {
     public class Rover
     {
@@ -23,14 +17,18 @@ namespace Pluto
         {
             foreach (char command in message)
             {
+                int speed = 0;
+
                 if (command == 'F')
                 {
-                    _y++;
+                    speed = 1;
                 }
                 else if (command == 'B')
                 {
-                    _y--;
+                    speed = -1;
                 }
+
+                _y = _y + speed;
             }
         }
 

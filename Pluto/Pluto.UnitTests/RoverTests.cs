@@ -39,14 +39,14 @@ namespace Pluto.UnitTests
             Assert.AreEqual(rover.GetY(), 6);
         }
 
-        [TestMethod]
-        public void ExecuteOrder_TurnRight_East()
-        {
-            Rover rover = new Rover(5, 5, 'N');
+        //[TestMethod]
+        //public void ExecuteOrder_TurnRight_East()
+        //{
+        //    Rover rover = new Rover(5, 5, 'N');
 
-            rover.ExecuteOrder("R");
+        //    rover.ExecuteOrder("R");
 
-            Assert.AreEqual(rover.GetDirection(), 'E');
-        }
+        //    Assert.AreEqual(rover.GetDirection(), 'E');
+        //}
     }
 }
