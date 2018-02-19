@@ -134,5 +134,18 @@ namespace Pluto.UnitTests
             Assert.AreEqual(rover.GetY(), 2);
             Assert.AreEqual(rover.GetDirection(), 'E');
         }
+
+
+        [TestMethod]
+        public void ExecuteOrder_OutOfMap_0_1_N()
+        {
+            Rover rover = new Rover(0, 99, new Compass('N'));
+
+            rover.ExecuteOrder("FF");
+
+            Assert.AreEqual(rover.GetX(), 0);
+            Assert.AreEqual(rover.GetY(), 1);
+            Assert.AreEqual(rover.GetDirection(), 'N');
+        }
     }
 }
