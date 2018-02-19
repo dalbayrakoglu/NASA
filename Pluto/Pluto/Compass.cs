@@ -23,6 +23,10 @@ namespace Pluto
             {
                 _directionIndex++;
             }
+            else if (steer == 'L')
+            {
+                _directionIndex--;
+            }
         }
     }
 }
