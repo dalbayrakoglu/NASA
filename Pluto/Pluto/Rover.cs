@@ -45,6 +45,7 @@ namespace Pluto
                 case 'N':
                     _y = _y + speed;
                     break;
+
                 case 'S':
                     _y = _y - speed;
                     break;
