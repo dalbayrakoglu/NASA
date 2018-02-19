@@ -33,5 +33,15 @@ namespace Pluto.UnitTests
 
             Assert.AreEqual(compass.GetDirection(), 'N');
         }
+
+        [TestMethod]
+        public void TurnLeft_InitWithNorth_W()
+        {
+            Compass compass = new Compass('N');
+
+            compass.Turn('L');
+
+            Assert.AreEqual(compass.GetDirection(), 'W');
+        }
     }
 }
